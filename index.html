@@ -951,11 +951,11 @@
     icon.style.transform = answer.classList.contains('hidden') ? '' : 'rotate(180deg)';
   }
 
-  // Search filter
-  document.getElementById('search-input').addEventListener('input', function() {
-    const q = this.value.toLowerCase();
-    if (!q) return;
-    document.getElementById('tramites-grid').scrollIntoView({behavior: 'smooth'});
+  // Search: scroll only on Enter key, not on every keystroke
+  document.getElementById('search-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      document.getElementById('tramites-grid').scrollIntoView({behavior: 'smooth'});
+    }
   });
 </script>
 </body>
