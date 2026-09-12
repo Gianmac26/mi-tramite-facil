@@ -126,16 +126,18 @@
 <body class="bg-background font-body-md text-on-surface antialiased">
 
 <!-- HEADER -->
-<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" id="main-header">
   <div class="bg-primary-container text-on-primary-fixed py-2 px-margin-mobile lg:px-margin">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-label-sm font-label-sm">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
-        <span>Empresa formal registrada en Perú • RUC 20606668733 • Lun a Sáb 8am - 8pm</span>
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 text-label-sm font-label-sm">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="w-2 h-2 shrink-0 rounded-full bg-secondary-fixed animate-pulse"></span>
+        <span class="hidden sm:inline truncate">Empresa formal registrada en Perú • RUC 20606668733 • Lun a Sáb 8am - 8pm</span>
+        <span class="sm:hidden truncate">RUC 20606668733 • Lun-Sáb 8am-8pm</span>
       </div>
-      <a class="flex items-center gap-1 text-secondary-fixed hover:text-on-primary font-bold transition-colors" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
+      <a class="flex items-center gap-1 text-secondary-fixed hover:text-on-primary font-bold transition-colors shrink-0" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
         <span class="material-symbols-outlined text-[16px]">chat</span>
-        <span>WhatsApp: +51 928 672 932</span>
+        <span class="hidden xs:inline sm:inline">WhatsApp: +51 928 672 932</span>
+        <span class="sm:hidden">WhatsApp</span>
       </a>
     </div>
   </div>
@@ -162,7 +164,7 @@
           </div>
         </a>
         <!-- Mobile menu button -->
-        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); setTimeout(adjustMainPadding, 10)">
           <span class="material-symbols-outlined text-primary text-[20px]">menu</span>
         </button>
       </div>
@@ -177,7 +179,7 @@
   </div>
 </header>
 
-<main class="w-full pt-32 bg-background min-h-screen">
+<main class="w-full bg-background min-h-screen" id="main-content">
   <div class="flex flex-col w-full">
 
     <!-- HERO SECTION -->
@@ -193,10 +195,10 @@
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 flex flex-col gap-6">
-            <h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-extrabold leading-tight">
+            <h1 class="font-extrabold text-[26px] leading-[33px] sm:text-[34px] sm:leading-[42px] lg:text-[44px] lg:leading-[54px] text-primary tracking-tight">
               Hacemos tus trámites del Estado por ti, <span class="text-secondary underline decoration-secondary-fixed decoration-4 underline-offset-4">sin colas</span> ni dolores de cabeza.
             </h1>
-            <p class="font-body-xl text-body-xl text-on-surface-variant max-w-2xl">
+            <p class="text-[16px] leading-[26px] sm:text-body-xl text-on-surface-variant max-w-2xl">
               Nos encargamos del papeleo, llenamos los formularios, pagamos las tasas oficiales en el banco y te entregamos tu documento listo. Tú descansas.
             </p>
             <!-- Search Box -->
@@ -230,7 +232,7 @@
             <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
               <a class="w-full sm:w-auto h-14 bg-[#25D366] text-white px-8 rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-3 shadow-lg hover:brightness-105 transition-all" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
                 <span class="material-symbols-outlined text-[26px]">chat</span>
-                <span>Pedir trámite por WhatsApp (+51 928 672 932)</span>
+                <span>Pedir trámite por WhatsApp</span>
               </a>
               <div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm px-2">
                 <span class="w-3 h-3 rounded-full bg-secondary animate-ping"></span>
@@ -238,8 +240,8 @@
               </div>
             </div>
           </div>
-          <!-- Right Card -->
-          <div class="lg:col-span-5 relative">
+          <!-- Right Card - hidden on mobile -->
+          <div class="hidden lg:block lg:col-span-5 relative">
             <div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col gap-6 relative z-10">
               <div class="flex items-center justify-between pb-4 border-b border-surface-container">
                 <div class="flex items-center gap-3">
@@ -296,7 +298,7 @@
       <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-12">
         <div class="flex flex-col items-center text-center gap-3 max-w-3xl mx-auto">
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Proceso Transparente</span>
-          <h2 class="font-headline-xl text-headline-xl text-primary tracking-tight font-bold">
+          <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] sm:leading-[38px] lg:text-headline-xl text-primary tracking-tight">
             Olvídate de las colas en el Estado en 3 simples pasos
           </h2>
           <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -350,7 +352,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div class="flex flex-col gap-2">
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Tarifas Transparentes</span>
-            <h2 class="font-headline-xl text-headline-xl text-primary font-bold">Trámites más solicitados</h2>
+            <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] lg:text-headline-xl text-primary">Trámites más solicitados</h2>
             <p class="font-body-md text-body-md text-on-surface-variant">Sin cargos ocultos. Conoce exactamente cuánto va al Estado y cuánto a nuestro servicio.</p>
           </div>
           <div class="flex items-center gap-2">
@@ -596,7 +598,7 @@
         <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-8">
           <div class="max-w-2xl flex flex-col gap-3">
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Seguridad y Garantía</span>
-            <h2 class="font-headline-xl text-headline-xl text-primary font-bold tracking-tight">
+            <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] lg:text-headline-xl text-primary tracking-tight">
               ¿Por qué miles de familias y adultos confían en Mi Trámite Fácil?
             </h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -662,7 +664,7 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div class="flex flex-col gap-2">
             <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Soluciones Integrales</span>
-            <h2 class="font-headline-xl text-headline-xl text-primary font-bold">Packs de Trámites Ahorro</h2>
+            <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] lg:text-headline-xl text-primary">Packs de Trámites Ahorro</h2>
             <p class="font-body-md text-body-md text-on-surface-variant">Resuelve varios requerimientos en un solo pedido coordinado con tarifa especial.</p>
           </div>
           <span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-xl font-label-sm text-label-sm font-bold flex items-center gap-1">
@@ -805,7 +807,7 @@
       <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
         <div class="flex flex-col items-center text-center gap-3">
           <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Preguntas Frecuentes</span>
-          <h2 class="font-headline-xl text-headline-xl text-primary font-bold">Todo lo que necesitas saber</h2>
+          <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] lg:text-headline-xl text-primary">Todo lo que necesitas saber</h2>
         </div>
         <div class="flex flex-col gap-4" id="faq-list">
           <!-- FAQ items handled by JS -->
@@ -821,7 +823,7 @@
         <span class="px-4 py-1.5 rounded-full bg-surface-container-lowest/10 text-secondary-fixed font-label-sm text-label-sm border border-secondary-fixed/30 backdrop-blur-md">
           Asesoría Gratuita Inmediata
         </span>
-        <h2 class="font-headline-xl text-headline-xl text-on-primary font-bold tracking-tight max-w-3xl">
+        <h2 class="font-bold text-[22px] leading-[28px] sm:text-[30px] lg:text-headline-xl text-on-primary tracking-tight max-w-3xl">
           ¿Tienes dudas sobre qué trámite te toca o qué papeles necesitas?
         </h2>
         <p class="font-body-xl text-body-xl text-primary-fixed-dim max-w-2xl">
@@ -829,7 +831,7 @@
         </p>
         <a class="w-full sm:w-auto h-16 px-10 bg-[#25D366] text-white rounded-2xl font-headline-sm text-headline-sm flex items-center justify-center gap-3 shadow-2xl hover:scale-[1.02] transition-transform" href="https://wa.me/51928672932?text=Hola,%20tengo%20una%20consulta%20sobre%20un%20tr%C3%A1mite" rel="noopener noreferrer" target="_blank">
           <span class="material-symbols-outlined text-[32px]">chat</span>
-          <span>Escribir al WhatsApp (+51 928 672 932)</span>
+          <span>Escribir al WhatsApp ahora</span>
         </a>
         <div class="flex flex-wrap items-center justify-center gap-6 text-on-primary-container font-label-sm text-label-sm pt-2">
           <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">check_circle</span> Sin colas en agencias</span>
@@ -902,6 +904,17 @@
 </footer>
 
 <script>
+  // Dynamic header padding
+  function adjustMainPadding() {
+    const header = document.getElementById('main-header');
+    const main = document.getElementById('main-content');
+    if (header && main) {
+      main.style.paddingTop = header.offsetHeight + 'px';
+    }
+  }
+  adjustMainPadding();
+  window.addEventListener('resize', adjustMainPadding);
+
   // FAQ data
   const faqs = [
     {
