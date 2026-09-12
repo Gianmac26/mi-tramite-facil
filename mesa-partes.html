@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Gestión ante Mesa de Partes — Mi Trámite Fácil</title>
+  <meta name="description" content="Presentamos escritos y solicitudes ante MTC, Migraciones, SAT, municipalidades y otras entidades. Un poder, una sola vez. Después gestionamos todo sin que te muevas."/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{colors:{"secondary-fixed":"#85f8c4","surface-container-high":"#dce9ff","on-primary-fixed":"#001b3b","secondary-container":"#82f5c1","on-secondary-container":"#00714e","on-primary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#006c4a","background":"#f8f9ff","on-background":"#0b1c30","primary-container":"#0f294a","surface-container":"#e5eeff","on-secondary":"#ffffff","on-primary-container":"#7a91b7","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b0c8f1","outline":"#74777f","surface-bright":"#f8f9ff","primary":"#00142f","on-surface-variant":"#44474e","surface":"#f8f9ff","on-error-container":"#93000a","on-surface":"#0b1c30","on-secondary-fixed":"#002114","error":"#ba1a1a","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","outline-variant":"#c4c6cf"},
+      borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},
+      spacing:{"space-sm":"0.75rem","space-md":"1.25rem","margin-mobile":"1rem","space-xl":"3rem","margin":"2rem","gutter":"1.5rem","space-lg":"2rem","space-xs":"0.375rem"},
+      fontFamily:{"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"]},
+      fontSize:{"label-md":["16px",{lineHeight:"20px",fontWeight:"600"}],"body-md":["17px",{lineHeight:"28px",fontWeight:"400"}],"label-sm":["13px",{lineHeight:"16px",fontWeight:"700"}],"body-lg":["19px",{lineHeight:"30px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-lg":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["15px",{lineHeight:"22px",fontWeight:"500"}],"body-xl":["20px",{lineHeight:"32px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}]}}}
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" id="main-header">
+  <div class="h-20 bg-surface/95 backdrop-blur-xl border-b border-outline-variant/30 px-margin-mobile lg:px-margin flex items-center">
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4">
+      <a href="index.html" class="flex flex-col">
+        <span class="font-headline-md text-headline-sm text-primary tracking-tight font-bold leading-none">Mi Trámite Fácil</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Gestión privada y transparente</span>
+      </a>
+      <nav class="hidden xl:flex items-center gap-6">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html">Inicio</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="tramites.html">Catálogo</a>
+        <a class="px-3 py-2 text-[#6d28d9] font-bold bg-[#6d28d9]/10 rounded-lg" href="embargo.html">Servicios Legales</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#faq">FAQ</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="blog.html">Blog</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl hover:bg-on-secondary-container transition-all shadow-[0_4px_12px_rgba(0,108,74,0.15)]" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[20px]">chat</span>
+          <div class="flex flex-col items-start leading-tight">
+            <span class="font-label-sm text-label-sm">Pedir por WhatsApp</span>
+            <span class="text-[11px] font-medium text-secondary-fixed opacity-90">Respuesta en 3 min</span>
+          </div>
+        </a>
+        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); setTimeout(adjustMainPadding,10)">
+          <span class="material-symbols-outlined text-primary text-[20px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html">Inicio</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="tramites.html">Catálogo</a>
+    <a class="px-3 py-2 text-[#6d28d9] font-bold rounded-lg bg-[#6d28d9]/10" href="embargo.html">Servicios Legales</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#faq">Preguntas Frecuentes</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="blog.html">Blog</a>
+  </div>
+</header>
+
+<main class="w-full bg-background min-h-screen" id="main-content">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-surface-container-low to-background pt-12 pb-10">
+    <div class="max-w-5xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-5">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">chevron_left</span> Inicio
+        </a>
+        <span class="text-on-surface-variant text-[12px]">/</span>
+        <span class="text-[#6d28d9] font-label-sm text-label-sm">Mesa de Partes</span>
+      </div>
+      <span class="inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-lg bg-[#6d28d9]/10 text-[#6d28d9] font-label-sm text-label-sm font-bold">
+        <span class="material-symbols-outlined text-[14px]">gavel</span> Servicio con Respaldo Legal
+      </span>
+      <h1 class="font-extrabold text-[26px] leading-[33px] sm:text-[34px] sm:leading-[42px] text-primary">Escritos y gestión<br/>ante Mesa de Partes</h1>
+      <p class="text-[16px] sm:text-body-lg text-on-surface-variant max-w-2xl">Presentamos solicitudes y escritos en tu nombre ante entidades del Estado peruano. Para actuar por ti, solo necesitas firmar un poder notarial una sola vez.</p>
+
+      <!-- KEY MESSAGE -->
+      <div class="bg-[#6d28d9]/5 border border-[#6d28d9]/15 rounded-2xl p-6 max-w-2xl">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[24px] shrink-0 mt-0.5">key</span>
+          <div class="flex flex-col gap-1">
+            <h3 class="font-bold text-[17px] text-primary">Un poder. Una sola vez.</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Te acompañamos a firmar el poder con firma legalizada ante notario. Ese es el único momento en que necesitas participar de forma presencial. Después gestionamos todos tus trámites sin que vuelvas a moverte ni firmar nada más.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DÓNDE PRESENTAMOS -->
+  <section class="py-12 bg-background">
+    <div class="max-w-5xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-8">
+      <h2 class="font-bold text-[22px] sm:text-[26px] text-primary">Entidades donde presentamos escritos</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">directions_car</span>
+          <span class="font-label-md text-label-md text-primary">MTC</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Licencias, recursos vehiculares</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">flight_land</span>
+          <span class="font-label-md text-label-md text-primary">Migraciones</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Residencia, cambio de calidad</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">account_balance</span>
+          <span class="font-label-md text-label-md text-primary">SAT Lima</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Recursos, fraccionamientos</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">home_work</span>
+          <span class="font-label-md text-label-md text-primary">Municipalidades</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Licencias, obras, quejas</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">badge</span>
+          <span class="font-label-md text-label-md text-primary">RENIEC</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Rectificaciones, solicitudes</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">home</span>
+          <span class="font-label-md text-label-md text-primary">SUNARP</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Inscripciones, levantamientos</span>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-4 flex flex-col items-center gap-2 shadow-sm text-center">
+          <span class="material-symbols-outlined text-primary text-[28px]">school</span>
+          <span class="font-label-md text-label-md text-primary">SUNEDU / MINEDU</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Validación de títulos</span>
+        </div>
+        <div class="bg-[#6d28d9]/5 border border-[#6d28d9]/10 rounded-2xl p-4 flex flex-col items-center gap-2 text-center">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[28px]">add_circle</span>
+          <span class="font-label-md text-label-md text-[#6d28d9]">Otra entidad</span>
+          <span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Consúltanos, evaluamos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ GESTIONAMOS -->
+  <section class="py-12 bg-surface-container-low">
+    <div class="max-w-5xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-8">
+      <div class="flex flex-col gap-2">
+        <h2 class="font-bold text-[22px] sm:text-[26px] text-primary">Qué gestionamos por ti</h2>
+        <p class="text-on-surface-variant font-body-sm text-body-sm">Ejemplos de escritos y solicitudes que presentamos con regularidad:</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-surface-container-lowest rounded-2xl p-5 flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[20px] mt-0.5 shrink-0">description</span>
+          <div>
+            <span class="font-bold text-[15px] text-on-surface">Recursos de reconsideración y apelación</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ante SAT Lima, MTC u otras entidades. Con firma de abogada colegiada cuando lo requiere el trámite.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-5 flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[20px] mt-0.5 shrink-0">inbox</span>
+          <div>
+            <span class="font-bold text-[15px] text-on-surface">Solicitudes administrativas</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pedidos de información, certificaciones, duplicados, actualizaciones de datos ante cualquier entidad.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-5 flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[20px] mt-0.5 shrink-0">handshake</span>
+          <div>
+            <span class="font-bold text-[15px] text-on-surface">Fraccionamientos y acuerdos de pago</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Presentación de solicitudes de fraccionamiento ante SAT Lima y SUNAT. Seguimiento hasta aprobación.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-lowest rounded-2xl p-5 flex items-start gap-3">
+          <span class="material-symbols-outlined text-[#6d28d9] text-[20px] mt-0.5 shrink-0">manage_search</span>
+          <div>
+            <span class="font-bold text-[15px] text-on-surface">Seguimiento de expedientes</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Verificamos el estado de tu expediente, leemos notificaciones en casilla electrónica y te informamos de cada movimiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="py-12 bg-background">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-8">
+      <h2 class="font-bold text-[22px] sm:text-[26px] text-primary">Cómo funciona paso a paso</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="flex flex-col gap-3 bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-[16px]">1</div>
+          <h4 class="font-bold text-[15px] text-primary">Nos cuentas qué necesitas</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Por WhatsApp: entidad, tipo de escrito y documentos disponibles. En 24 horas te damos presupuesto.</p>
+        </div>
+        <div class="flex flex-col gap-3 bg-[#6d28d9]/5 rounded-2xl p-5 border border-[#6d28d9]/10">
+          <div class="w-10 h-10 rounded-full bg-[#6d28d9] text-white flex items-center justify-center font-black text-[16px]">2</div>
+          <h4 class="font-bold text-[15px] text-primary">Firmamos el poder notarial</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Te acompañamos al notario o coordinamos una visita. Un trámite de 30 minutos que habilita todo lo demás.</p>
+        </div>
+        <div class="flex flex-col gap-3 bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[16px]">3</div>
+          <h4 class="font-bold text-[15px] text-primary">Redactamos y presentamos</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Nuestra abogada redacta el escrito, lo firma si corresponde y lo presenta en mesa de partes con cargo de recepción.</p>
+        </div>
+        <div class="flex flex-col gap-3 bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-[16px]">4</div>
+          <h4 class="font-bold text-[15px] text-primary">Seguimos y te informamos</h4>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Monitoreamos el expediente y te notificamos cada avance. Tú no tienes que ir ni llamar a ninguna entidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO Y CTA -->
+  <section class="py-16 bg-primary text-on-primary">
+    <div class="max-w-3xl mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-6">
+      <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-[32px]">inbox</span>
+      </div>
+      <h2 class="font-bold text-[22px] sm:text-[28px] text-on-primary">¿Tienes un escrito que presentar o un expediente parado?</h2>
+      <p class="text-primary-fixed-dim text-[16px] max-w-xl">Cuéntanos en qué entidad, qué tipo de solicitud y en 24 horas tienes el presupuesto y el plan de acción.</p>
+      <a class="h-14 px-10 bg-[#25D366] text-white rounded-2xl font-label-lg text-label-lg flex items-center gap-3 shadow-xl hover:brightness-105 transition-all"
+         href="https://wa.me/51928672932?text=Hola,%20necesito%20presentar%20un%20escrito%20ante%20una%20entidad%20del%20Estado" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[24px]">chat</span> Consultar por WhatsApp
+      </a>
+      <p class="text-primary-fixed-dim text-[13px]">Consulta inicial sin costo. Presupuesto en 24 horas.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating WA -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+  <div class="bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full shadow-[0_4px_16px_rgba(15,41,74,0.12)] border border-outline-variant/30 flex items-center gap-2">
+    <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+    <span class="font-label-sm text-label-sm text-primary">Asesor en línea</span>
+  </div>
+  <a class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform" href="https://wa.me/51928672932" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined text-[30px]">chat</span>
+  </a>
+</div>
+
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6 border-b border-outline-variant/20">
+      <div class="flex flex-col gap-3">
+        <span class="font-headline-md text-headline-sm text-primary font-bold">Mi Trámite Fácil</span>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Gestoría digital peruana con respaldo legal cuando hace falta.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Servicios</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="index.html">Inicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="tramites.html">Catálogo de Trámites</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="embargo.html">Cuenta Embargada</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="papeletas.html">Papeletas SAT</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Contacto</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary flex items-center gap-1" href="https://wa.me/51928672932" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp: +51 928 672 932
+        </a>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Lun a Sáb, 8am – 8pm</span>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80">
+      <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+        <span>© 2024 Mi Trámite Fácil</span><span class="hidden sm:inline">•</span>
+        <span class="font-bold">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
+        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span><span>Lima, Perú</span>
+      </div>
+      <span>Conexión cifrada SSL de 256 bits</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function adjustMainPadding() {
+    const h = document.getElementById('main-header');
+    const m = document.getElementById('main-content');
+    if (h && m) m.style.paddingTop = h.offsetHeight + 'px';
+  }
+  adjustMainPadding();
+  window.addEventListener('resize', adjustMainPadding);
+</script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Desbloqueo de Cuenta Embargada — Mi Trámite Fácil</title>
+  <meta name="description" content="El SAT o SUNAT te congeló la cuenta bancaria. Evaluamos tu caso y gestionamos el levantamiento del embargo — con o sin respaldo legal según lo que necesites."/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{colors:{"secondary-fixed":"#85f8c4","surface-container-high":"#dce9ff","on-primary-fixed":"#001b3b","secondary-container":"#82f5c1","on-secondary-container":"#00714e","on-primary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#006c4a","background":"#f8f9ff","on-background":"#0b1c30","primary-container":"#0f294a","surface-container":"#e5eeff","on-secondary":"#ffffff","on-primary-container":"#7a91b7","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b0c8f1","outline":"#74777f","surface-bright":"#f8f9ff","primary":"#00142f","on-surface-variant":"#44474e","surface":"#f8f9ff","on-error-container":"#93000a","on-surface":"#0b1c30","on-secondary-fixed":"#002114","error":"#ba1a1a","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","outline-variant":"#c4c6cf"},
+      borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},
+      spacing:{"space-sm":"0.75rem","space-md":"1.25rem","margin-mobile":"1rem","space-xl":"3rem","margin":"2rem","gutter":"1.5rem","space-lg":"2rem","space-xs":"0.375rem"},
+      fontFamily:{"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"]},
+      fontSize:{"label-md":["16px",{lineHeight:"20px",fontWeight:"600"}],"body-md":["17px",{lineHeight:"28px",fontWeight:"400"}],"label-sm":["13px",{lineHeight:"16px",fontWeight:"700"}],"body-lg":["19px",{lineHeight:"30px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-lg":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["15px",{lineHeight:"22px",fontWeight:"500"}],"body-xl":["20px",{lineHeight:"32px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}]}}}
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" id="main-header">
+  <div class="h-20 bg-surface/95 backdrop-blur-xl border-b border-outline-variant/30 px-margin-mobile lg:px-margin flex items-center">
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4">
+      <a href="index.html" class="flex flex-col">
+        <span class="font-headline-md text-headline-sm text-primary tracking-tight font-bold leading-none">Mi Trámite Fácil</span>
+        <span class="font-label-sm text-label-sm text-on-surface-variant">Gestión privada y transparente</span>
+      </a>
+      <nav class="hidden xl:flex items-center gap-6">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html">Inicio</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="tramites.html">Catálogo</a>
+        <a class="px-3 py-2 text-[#6d28d9] font-bold bg-[#6d28d9]/10 rounded-lg" href="embargo.html">Servicios Legales</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#faq">FAQ</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="blog.html">Blog</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl hover:bg-on-secondary-container transition-all shadow-[0_4px_12px_rgba(0,108,74,0.15)]" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[20px]">chat</span>
+          <div class="flex flex-col items-start leading-tight">
+            <span class="font-label-sm text-label-sm">Pedir por WhatsApp</span>
+            <span class="text-[11px] font-medium text-secondary-fixed opacity-90">Respuesta en 3 min</span>
+          </div>
+        </a>
+        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); setTimeout(adjustMainPadding,10)">
+          <span class="material-symbols-outlined text-primary text-[20px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html">Inicio</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="tramites.html">Catálogo de Trámites</a>
+    <a class="px-3 py-2 text-[#6d28d9] font-bold rounded-lg bg-[#6d28d9]/10" href="embargo.html">Servicios Legales</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#faq">Preguntas Frecuentes</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="blog.html">Blog</a>
+  </div>
+</header>
+
+<main class="w-full bg-background min-h-screen" id="main-content">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-surface-container-low to-background pt-12 pb-8">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-4">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary flex items-center gap-1">
+          <span class="material-symbols-outlined text-[16px]">chevron_left</span> Inicio
+        </a>
+        <span class="text-on-surface-variant text-[12px]">/</span>
+        <span class="text-[#6d28d9] font-label-sm text-label-sm">Cuenta Embargada</span>
+      </div>
+      <span class="inline-flex items-center gap-1.5 w-fit px-3 py-1 rounded-lg bg-[#6d28d9]/10 text-[#6d28d9] font-label-sm text-label-sm font-bold">
+        <span class="material-symbols-outlined text-[14px]">gavel</span> Servicio con Respaldo Legal
+      </span>
+      <h1 class="font-extrabold text-[26px] leading-[33px] sm:text-[34px] sm:leading-[42px] text-primary">Tu cuenta fue embargada.<br/>Tiene solución.</h1>
+      <p class="text-[16px] sm:text-body-lg text-on-surface-variant max-w-2xl">El SAT, SUNAT u otra entidad te congeló la cuenta bancaria. Esto es manejable. La ruta depende de tu situación — te explicamos cómo avanzar.</p>
+    </div>
+  </section>
+
+  <!-- TRIAGE -->
+  <section class="py-10 bg-background">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin">
+
+      <div class="bg-surface-container-lowest rounded-3xl p-8 shadow-lg border border-outline-variant/20">
+        <h2 class="font-bold text-[20px] sm:text-[24px] text-primary mb-2">Una pregunta antes de todo:</h2>
+        <p class="text-on-surface-variant text-[17px] mb-8 font-medium">¿Ya pagaste la deuda o te aprobaron un fraccionamiento?</p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+          <button onclick="showRoute('si')" id="btn-si" class="triage-btn flex-1 h-14 rounded-2xl font-label-lg text-label-lg border-2 transition-all bg-secondary/5 border-secondary/30 text-secondary hover:bg-secondary hover:text-white hover:border-secondary">
+            Sí, ya pagué o tengo fraccionamiento
+          </button>
+          <button onclick="showRoute('no')" id="btn-no" class="triage-btn flex-1 h-14 rounded-2xl font-label-lg text-label-lg border-2 transition-all bg-[#6d28d9]/5 border-[#6d28d9]/30 text-[#6d28d9] hover:bg-[#6d28d9] hover:text-white hover:border-[#6d28d9]">
+            No, aún tengo la deuda pendiente
+          </button>
+          <button onclick="showRoute('nose')" id="btn-nose" class="triage-btn flex-1 h-14 rounded-2xl font-label-lg text-label-lg border-2 transition-all bg-surface-container border-outline-variant/40 text-on-surface-variant hover:bg-surface-container-high">
+            No lo tengo claro
+          </button>
+        </div>
+
+        <!-- Ruta SÍ -->
+        <div id="route-si" class="hidden">
+          <div class="bg-secondary/5 border border-secondary/20 rounded-2xl p-6 flex flex-col gap-5">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[14px] shrink-0 mt-0.5">✓</span>
+              <div>
+                <h3 class="font-bold text-[18px] text-primary">Ruta GESTIÓN — Levantamiento administrativo</h3>
+                <p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Pagaste o tienes un fraccionamiento aprobado. El Estado debe levantar el embargo. Gestionamos la solicitud — es un trámite administrativo, no necesita abogado.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Incluye</span>
+                <ul class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>Revisión de deuda y estado del embargo</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>Redacción de solicitud de levantamiento</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>Presentación ante SAT o SUNAT</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">check_circle</span>Seguimiento hasta resolución</li>
+                </ul>
+              </div>
+              <div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Tiempo y precio</span>
+                <div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+                  <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span> <strong class="text-primary text-[16px]">48 horas</strong> para solicitar</span>
+                  <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">account_balance</span> SAT emite resolución en 5-10 días hábiles</span>
+                  <span class="flex items-center gap-1.5 mt-2"><span class="font-bold text-on-surface text-[16px]">Honorarios: Consultar</span></span>
+                </div>
+              </div>
+            </div>
+            <a class="h-13 px-8 py-3 bg-secondary text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors self-start"
+               href="https://wa.me/51928672932?text=Hola,%20ya%20pagué%20la%20deuda%20y%20necesito%20el%20levantamiento%20del%20embargo" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[20px]">chat</span> Iniciar gestión por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Ruta NO -->
+        <div id="route-no" class="hidden">
+          <div class="bg-[#6d28d9]/5 border border-[#6d28d9]/20 rounded-2xl p-6 flex flex-col gap-5">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-full bg-[#6d28d9] text-white flex items-center justify-center font-black text-[14px] shrink-0 mt-0.5">!</span>
+              <div>
+                <h3 class="font-bold text-[18px] text-primary">Ruta DEFENSA — Evaluación y estrategia legal</h3>
+                <p class="text-on-surface-variant font-body-sm text-body-sm mt-1">La deuda aún existe. Antes de pagar, vale revisar si hay errores, prescripción, o si conviene negociar un fraccionamiento. Nuestra abogada colegiada evalúa tu caso y define la estrategia.</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-[#6d28d9] font-bold uppercase tracking-wide">Incluye</span>
+                <ul class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#6d28d9] text-[16px] mt-0.5">check_circle</span>Revisión legal del expediente de deuda</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#6d28d9] text-[16px] mt-0.5">check_circle</span>Evaluación de prescripción o nulidad</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#6d28d9] text-[16px] mt-0.5">check_circle</span>Estrategia de fraccionamiento o impugnación</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#6d28d9] text-[16px] mt-0.5">check_circle</span>Firma de abogada colegiada en escritos</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[#6d28d9] text-[16px] mt-0.5">check_circle</span>Gestión presencial en Lima si es necesario</li>
+                </ul>
+              </div>
+              <div class="bg-surface-container-lowest rounded-xl p-4 flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-[#6d28d9] font-bold uppercase tracking-wide">Tiempo y precio</span>
+                <div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+                  <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">schedule</span> Evaluación inicial en <strong class="text-primary">24-48 horas</strong></span>
+                  <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">person</span> Abogada colegiada aliada en Lima</span>
+                  <span class="flex items-center gap-1.5 mt-2"><span class="font-bold text-on-surface text-[16px]">Honorarios: Desde consultar</span></span>
+                  <span class="text-[12px]">Evaluación previa sin costo comprometido</span>
+                </div>
+              </div>
+            </div>
+            <a class="h-13 px-8 py-3 bg-[#6d28d9] text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-[#5b21b6] transition-colors self-start"
+               href="https://wa.me/51928672932?text=Hola,%20mi%20cuenta%20fue%20embargada%20y%20aún%20tengo%20la%20deuda.%20Quiero%20evaluación%20legal" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[20px]">chat</span> Solicitar evaluación legal gratuita
+            </a>
+          </div>
+        </div>
+
+        <!-- Ruta NO SÉ -->
+        <div id="route-nose" class="hidden">
+          <div class="bg-surface-container-low border border-outline-variant/30 rounded-2xl p-6 flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-black text-[14px] shrink-0 mt-0.5">?</span>
+              <div>
+                <h3 class="font-bold text-[18px] text-primary">Lo revisamos contigo en 10 minutos</h3>
+                <p class="text-on-surface-variant font-body-sm text-body-sm mt-1">Escríbenos por WhatsApp con el nombre de la entidad que te embargó (SAT, SUNAT, otra) y en 10 minutos te decimos exactamente en qué ruta estás y qué sigue. Sin costo.</p>
+              </div>
+            </div>
+            <a class="h-13 px-8 py-3 bg-[#25D366] text-white rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-2 hover:brightness-105 transition-all self-start"
+               href="https://wa.me/51928672932?text=Hola,%20mi%20cuenta%20fue%20embargada%20y%20no%20sé%20bien%20el%20estado%20de%20la%20deuda.%20¿Me%20pueden%20orientar?" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[20px]">chat</span> Consultar gratis por WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESO / TIMELINE -->
+  <section class="py-12 bg-surface-container-low">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-8">
+      <div class="flex flex-col gap-2">
+        <h2 class="font-bold text-[22px] sm:text-[28px] text-primary">Cómo avanza el proceso</h2>
+        <p class="text-on-surface-variant">Ruta GESTIÓN (ya pagaste). La ruta DEFENSA sigue pasos similares con evaluación legal previa.</p>
+      </div>
+      <div class="flex flex-col gap-0">
+        <!-- Timeline items -->
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[14px] shrink-0">1</div>
+            <div class="w-0.5 bg-outline-variant/40 flex-1 my-1"></div>
+          </div>
+          <div class="pb-8 flex flex-col gap-1 pt-1.5">
+            <h4 class="font-bold text-[16px] text-primary">Nos escribes y compartimos los datos</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Número de expediente SAT/SUNAT, comprobante de pago o fraccionamiento, y DNI. Todo por WhatsApp.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[14px] shrink-0">2</div>
+            <div class="w-0.5 bg-outline-variant/40 flex-1 my-1"></div>
+          </div>
+          <div class="pb-8 flex flex-col gap-1 pt-1.5">
+            <h4 class="font-bold text-[16px] text-primary">Confirmamos tu caso y confirmamos honorarios</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Verificamos el expediente en el sistema, te explicamos el proceso exacto y el costo. Sin sorpresas.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-[#6d28d9] text-white flex items-center justify-center font-black shrink-0 text-[12px]" style="font-size:11px">48h</div>
+            <div class="w-0.5 bg-outline-variant/40 flex-1 my-1"></div>
+          </div>
+          <div class="pb-8 flex flex-col gap-1 pt-1.5">
+            <h4 class="font-bold text-[16px] text-primary flex items-center gap-2">Presentamos la solicitud de levantamiento <span class="px-2 py-0.5 rounded bg-[#6d28d9]/10 text-[#6d28d9] text-[11px] font-bold">Hito clave: 48 h</span></h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Redactamos y presentamos la solicitud ante SAT o SUNAT en un máximo de 48 horas desde la confirmación. La entidad tiene 5 a 10 días hábiles para emitir la resolución.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[14px] shrink-0">4</div>
+            <div class="w-0.5 bg-outline-variant/40 flex-1 my-1"></div>
+          </div>
+          <div class="pb-8 flex flex-col gap-1 pt-1.5">
+            <h4 class="font-bold text-[16px] text-primary">Seguimiento hasta la resolución</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Monitoreamos el expediente y te avisamos en cuanto la entidad emita la resolución de levantamiento. No tienes que hacer nada más.</p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-black text-[14px] shrink-0">5</div>
+          </div>
+          <div class="pb-2 flex flex-col gap-1 pt-1.5">
+            <h4 class="font-bold text-[16px] text-primary">Cuenta desbloqueada</h4>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">El banco recibe la orden de levantamiento y libera tu cuenta. Te enviamos la resolución oficial en PDF.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ NECESITAMOS -->
+  <section class="py-12 bg-background">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="flex flex-col gap-6">
+          <h2 class="font-bold text-[22px] text-primary">Qué necesitamos de ti</h2>
+          <div class="flex flex-col gap-3">
+            <div class="flex items-start gap-3 bg-surface-container-lowest rounded-xl p-4">
+              <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">badge</span>
+              <div>
+                <span class="font-bold text-on-surface text-[15px]">DNI escaneado</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Foto clara de ambas caras. Solo para identificarte ante la entidad.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 bg-surface-container-lowest rounded-xl p-4">
+              <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">receipt_long</span>
+              <div>
+                <span class="font-bold text-on-surface text-[15px]">Comprobante de pago o fraccionamiento (si aplica)</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Voucher del banco o resolución de fraccionamiento aprobada.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 bg-surface-container-lowest rounded-xl p-4">
+              <span class="material-symbols-outlined text-secondary text-[20px] mt-0.5 shrink-0">tag</span>
+              <div>
+                <span class="font-bold text-on-surface text-[15px]">Número de expediente o referencia SAT/SUNAT</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Aparece en la notificación de embargo. Si no lo tienes, lo buscamos con tu DNI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="bg-[#6d28d9]/5 border border-[#6d28d9]/15 rounded-2xl p-5 flex flex-col gap-3">
+            <span class="material-symbols-outlined text-[#6d28d9] text-[24px]">info</span>
+            <h4 class="font-bold text-[15px] text-primary">Lo que NO pedimos</h4>
+            <ul class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[14px] text-error mt-0.5">close</span>Contraseñas bancarias ni claves de banca online</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[14px] text-error mt-0.5">close</span>Claves SOL de SUNAT</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[14px] text-error mt-0.5">close</span>Acceso a tu cuenta de home banking</li>
+            </ul>
+          </div>
+          <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-5 flex flex-col gap-2">
+            <span class="font-bold text-[14px] text-on-surface-variant uppercase tracking-wide">Aviso honesto</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">No garantizamos resultados. Gestionamos el trámite con diligencia y respaldo legal — la decisión final corresponde a la entidad estatal. Si el caso tiene complejidades legales inesperadas, lo informamos antes de avanzar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-on-primary">
+    <div class="max-w-3xl mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-6">
+      <h2 class="font-bold text-[22px] sm:text-[28px] text-on-primary">¿Tienes tu cuenta bloqueada ahora mismo?</h2>
+      <p class="text-primary-fixed-dim text-[16px] sm:text-body-lg max-w-xl">Escríbenos. En menos de 10 minutos te decimos en qué ruta estás y qué hacemos primero.</p>
+      <a class="h-14 px-10 bg-[#25D366] text-white rounded-2xl font-label-lg text-label-lg flex items-center gap-3 shadow-xl hover:brightness-105 transition-all"
+         href="https://wa.me/51928672932?text=Hola,%20mi%20cuenta%20bancaria%20fue%20embargada.%20Necesito%20orientación." target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[24px]">chat</span> Escribir al WhatsApp ahora
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating WA -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+  <div class="bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full shadow-[0_4px_16px_rgba(15,41,74,0.12)] border border-outline-variant/30 flex items-center gap-2">
+    <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+    <span class="font-label-sm text-label-sm text-primary">Asesor en línea</span>
+  </div>
+  <a class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform" href="https://wa.me/51928672932" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined text-[30px]">chat</span>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6 border-b border-outline-variant/20">
+      <div class="flex flex-col gap-3">
+        <span class="font-headline-md text-headline-sm text-primary font-bold">Mi Trámite Fácil</span>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Gestoría digital peruana con respaldo legal cuando hace falta.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Servicios</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="index.html">Inicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="tramites.html">Catálogo de Trámites</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="papeletas.html">Papeletas SAT</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="mesa-partes.html">Mesa de Partes</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Contacto</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary flex items-center gap-1" href="https://wa.me/51928672932" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp: +51 928 672 932
+        </a>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Lun a Sáb, 8am – 8pm</span>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80">
+      <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+        <span>© 2024 Mi Trámite Fácil</span><span class="hidden sm:inline">•</span>
+        <span class="font-bold">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
+        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span><span>Lima, Perú</span>
+      </div>
+      <span>Conexión cifrada SSL de 256 bits</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .triage-btn.active-si { background: #006c4a; color: white; border-color: #006c4a; }
+  .triage-btn.active-no { background: #6d28d9; color: white; border-color: #6d28d9; }
+  .triage-btn.active-nose { background: #e5eeff; color: #00142f; border-color: #c4c6cf; }
+</style>
+<script>
+  function adjustMainPadding() {
+    const h = document.getElementById('main-header');
+    const m = document.getElementById('main-content');
+    if (h && m) m.style.paddingTop = h.offsetHeight + 'px';
+  }
+  adjustMainPadding();
+  window.addEventListener('resize', adjustMainPadding);
+
+  function showRoute(route) {
+    ['si','no','nose'].forEach(r => {
+      document.getElementById('route-'+r).classList.add('hidden');
+      document.getElementById('btn-'+r).classList.remove('active-si','active-no','active-nose');
+    });
+    document.getElementById('route-'+route).classList.remove('hidden');
+    document.getElementById('btn-'+route).classList.add('active-'+route);
+    document.getElementById('route-'+route).scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>
