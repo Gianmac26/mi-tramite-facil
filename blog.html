@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Blog de Trámites — Mi Trámite Fácil</title>
+  <meta name="description" content="Guías y consejos sobre trámites del Estado peruano: RENIEC, PNP, SUNARP, Migraciones, SUNAT y MTC. Aprende cómo tramitar sin colas y sin errores."/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{colors:{"secondary-fixed":"#85f8c4","surface-container-high":"#dce9ff","on-primary-fixed":"#001b3b","secondary-container":"#82f5c1","on-secondary-container":"#00714e","on-primary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#006c4a","background":"#f8f9ff","on-background":"#0b1c30","primary-container":"#0f294a","surface-container":"#e5eeff","on-secondary":"#ffffff","on-primary-container":"#7a91b7","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b0c8f1","outline":"#74777f","surface-bright":"#f8f9ff","primary":"#00142f","on-surface-variant":"#44474e","surface":"#f8f9ff","on-error-container":"#93000a","on-surface":"#0b1c30","on-secondary-fixed":"#002114","error":"#ba1a1a","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","outline-variant":"#c4c6cf"},
+      borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},
+      spacing:{"space-sm":"0.75rem","space-md":"1.25rem","margin-mobile":"1rem","space-xl":"3rem","margin":"2rem","gutter":"1.5rem","space-lg":"2rem","space-xs":"0.375rem"},
+      fontFamily:{"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"]},
+      fontSize:{"label-md":["16px",{lineHeight:"20px",fontWeight:"600"}],"body-md":["17px",{lineHeight:"28px",fontWeight:"400"}],"label-sm":["13px",{lineHeight:"16px",fontWeight:"700"}],"body-lg":["19px",{lineHeight:"30px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-lg":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["15px",{lineHeight:"22px",fontWeight:"500"}],"body-xl":["20px",{lineHeight:"32px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}]}}}
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" id="main-header">
+  <div class="h-20 bg-surface/95 backdrop-blur-xl border-b border-outline-variant/30 px-margin-mobile lg:px-margin flex items-center">
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="flex flex-col">
+          <span class="font-headline-md text-headline-sm text-primary tracking-tight font-bold leading-none">Mi Trámite Fácil</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Gestión privada y transparente</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-6">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html">Inicio</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="tramites.html">Catálogo de Trámites</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#como-funciona">Cómo Funciona</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#faq">Preguntas Frecuentes</a>
+        <a class="px-3 py-2 text-secondary font-bold bg-secondary-container/20 rounded-lg" href="blog.html">Blog</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl hover:bg-on-secondary-container transition-all shadow-[0_4px_12px_rgba(0,108,74,0.15)]" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[20px]">chat</span>
+          <div class="flex flex-col items-start leading-tight">
+            <span class="font-label-sm text-label-sm">Pedir por WhatsApp</span>
+            <span class="text-[11px] font-medium text-secondary-fixed opacity-90">Respuesta en 3 min</span>
+          </div>
+        </a>
+        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); setTimeout(adjustMainPadding,10)">
+          <span class="material-symbols-outlined text-primary text-[20px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html">Inicio</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="tramites.html">Catálogo de Trámites</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#como-funciona">Cómo Funciona</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#faq">Preguntas Frecuentes</a>
+    <a class="px-3 py-2 text-secondary font-bold rounded-lg bg-secondary-container/20" href="blog.html">Blog</a>
+  </div>
+</header>
+
+<main class="w-full bg-background min-h-screen" id="main-content">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-surface-container-low to-background pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-4 max-w-3xl">
+      <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Blog oficial</span>
+      <h1 class="font-extrabold text-[26px] leading-[33px] sm:text-[36px] sm:leading-[44px] text-primary">Guías de trámites del Estado peruano</h1>
+      <p class="text-[16px] sm:text-body-lg text-on-surface-variant max-w-2xl">Artículos con información clara, actualizada y práctica sobre los trámites más comunes del Estado. Con fuentes oficiales para que siempre estés informado.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLES GRID -->
+  <section class="py-10 bg-background">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Artículo 1: DNI Duplicado -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-[64px]">badge</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">RENIEC</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">10 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Cómo sacar el duplicado de DNI electrónico en 2025: pasos, tasas y requisitos</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Perdiste tu DNI o te lo robaron? Te explicamos el proceso oficial, cuánto cuesta la tasa RENIEC (S/ 33.00), cuánto demora y qué documentos necesitas. Más las diferencias entre el trámite online y presencial.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.gob.pe/936-duplicado-del-dni-electronico" target="_blank" rel="noopener noreferrer">gob.pe — Duplicado del DNIe</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20el%20artículo%20del%20DNI%20y%20quiero%20que%20me%20ayuden%20con%20el%20duplicado" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Tramitar mi DNI por WhatsApp
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artículo 2: Antecedentes Policiales -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-secondary/10 to-secondary/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-[64px]">verified_user</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">PNP</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">8 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Antecedentes Policiales en Perú: cómo obtenerlos online, cuánto cuesta y para qué sirven</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">El certificado de antecedentes policiales (PNP) cuesta S/ 5.40 y se puede obtener completamente en línea. Aprende a pagarlo con código 08116, descargarlo con QR y usarlo para trabajo o visa.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.gob.pe/849-certificado-de-antecedentes-policiales" target="_blank" rel="noopener noreferrer">gob.pe — Antecedentes Policiales</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20el%20artículo%20de%20Antecedentes%20Policiales%20y%20quiero%20solicitarlos" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Solicitar mis Antecedentes
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artículo 3: CUL -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-[#b45309]/10 to-[#b45309]/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#b45309] text-[64px]">work</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">CUL · MTPE</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">7 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Certificado Único Laboral (CUL): qué es, cómo se obtiene y por qué reemplaza a 4 documentos</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">El CUL es gratuito y combina antecedentes policiales, penales, judiciales e historial laboral en un solo PDF. Te explicamos cómo descargarlo en minutos desde el portal oficial del MTPE.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.gob.pe/certificadounico" target="_blank" rel="noopener noreferrer">gob.pe — Certificado Único Laboral</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20sobre%20el%20CUL%20y%20quisiera%20ayuda%20para%20obtenerlo" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Obtener mi CUL por WhatsApp
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artículo 4: Copia Literal SUNARP -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-primary/10 to-secondary/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-primary text-[64px]">home</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">SUNARP</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">9 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Copia Literal SUNARP: qué es, para qué sirve y cómo pedirla sin ir a la oficina</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">La copia literal (S/ 14.00) es el documento más pedido al comprar, vender o heredar un inmueble o vehículo. Aprende qué datos necesitas, cómo pagarla vía Págalo.pe y cuánto demora la entrega digital.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.sunarp.gob.pe/PREG/inicio/post/como-solicitar-una-copia-literal" target="_blank" rel="noopener noreferrer">SUNARP — Copia Literal</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20sobre%20la%20Copia%20Literal%20SUNARP%20y%20quiero%20solicitarla" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Pedir Copia Literal por WhatsApp
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artículo 5: Prórroga Migraciones -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-secondary/10 to-primary/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-secondary text-[64px]">flight_land</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">Migraciones</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">12 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Prórroga de residencia en Perú: plazos, requisitos y cómo tramitarla antes de que venza tu permiso</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">La prórroga de residencia cuesta S/ 20.20 (cód. 07566) y se gestiona online. Explicamos los tipos de calidad migratoria, plazos máximos, documentos y consecuencias de no renovar a tiempo.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.migraciones.gob.pe/servicios/prorrogas/" target="_blank" rel="noopener noreferrer">Migraciones Perú — Prórrogas</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20sobre%20la%20Prórroga%20de%20Residencia%20y%20quiero%20tramitarla" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Tramitar mi prórroga por WhatsApp
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Artículo 6: Papeletas SAT -->
+        <article class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <div class="h-40 bg-gradient-to-br from-[#b45309]/10 to-[#b45309]/5 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#b45309] text-[64px]">directions_car</span>
+          </div>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">SAT Lima</span>
+              <span class="text-on-surface-variant font-body-sm text-body-sm">11 min de lectura</span>
+            </div>
+            <div class="flex flex-col gap-2 flex-1">
+              <h2 class="font-bold text-headline-sm text-primary leading-snug">Papeletas SAT Lima: cómo consultar, impugnar y cuándo pueden prescribir (guía 2025)</h2>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Las multas de tránsito del SAT tienen plazos legales y mecanismos de defensa que muy pocos conocen. Aprende a consultar online, presentar recursos de reconsideración y detectar multas prescritas a más de 4 años.</p>
+            </div>
+            <div class="flex flex-col gap-3 mt-auto pt-2">
+              <div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
+                <span>Fuente oficial: <a class="text-secondary underline hover:no-underline" href="https://www.sat.gob.pe/websitev9/tramitesyservicio/papeletas" target="_blank" rel="noopener noreferrer">SAT Lima — Papeletas</a></span>
+              </div>
+              <a class="h-11 w-full bg-primary text-on-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors"
+                 href="https://wa.me/51928672932?text=Hola,%20leí%20el%20artículo%20de%20papeletas%20SAT%20y%20quiero%20ayuda%20con%20las%20mías" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                Revisar mis papeletas SAT
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-16 bg-surface-container-low border-t border-outline-variant/20">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-6">
+      <span class="material-symbols-outlined text-secondary text-[48px]">notifications_active</span>
+      <h2 class="font-bold text-[22px] sm:text-[28px] text-primary">¿Quieres recibir guías actualizadas?</h2>
+      <p class="text-on-surface-variant text-[16px] sm:text-body-lg max-w-xl">Escríbenos por WhatsApp y te avisamos cuando haya cambios importantes en tasas, requisitos o nuevos trámites disponibles en línea.</p>
+      <a class="h-14 px-10 bg-[#25D366] text-white rounded-2xl font-label-lg text-label-lg flex items-center gap-3 shadow-xl hover:brightness-105 transition-all" href="https://wa.me/51928672932?text=Hola,%20me%20interesan%20las%20novedades%20sobre%20trámites%20del%20Estado" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[24px]">chat</span>
+        <span>Suscribirme por WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating WA -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+  <div class="bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full shadow-[0_4px_16px_rgba(15,41,74,0.12)] border border-outline-variant/30 flex items-center gap-2">
+    <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+    <span class="font-label-sm text-label-sm text-primary">Asesor en línea</span>
+  </div>
+  <a class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform" href="https://wa.me/51928672932" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined text-[30px]">chat</span>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6 border-b border-outline-variant/20">
+      <div class="flex flex-col gap-3">
+        <span class="font-headline-md text-headline-sm text-primary font-bold">Mi Trámite Fácil</span>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Gestoría digital peruana. Tramitamos por ti de forma transparente y segura.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Páginas</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="index.html">Inicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="tramites.html">Catálogo de Trámites</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="blog.html">Blog de Trámites</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Contacto</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary flex items-center gap-1" href="https://wa.me/51928672932" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp: +51 928 672 932
+        </a>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Lun a Sáb, 8am – 8pm</span>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+        <span>© 2024 Mi Trámite Fácil</span><span class="hidden sm:inline">•</span>
+        <span class="font-bold text-on-surface-variant">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
+        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span><span>Lima, Perú</span>
+      </div>
+      <span>Conexión cifrada SSL de 256 bits</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function adjustMainPadding() {
+    const h = document.getElementById('main-header');
+    const m = document.getElementById('main-content');
+    if (h && m) m.style.paddingTop = h.offsetHeight + 'px';
+  }
+  adjustMainPadding();
+  window.addEventListener('resize', adjustMainPadding);
+</script>
+</body>
+</html>

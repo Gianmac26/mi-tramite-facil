@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Catálogo de Trámites — Mi Trámite Fácil</title>
+  <meta name="description" content="Catálogo completo de trámites del Estado peruano: RENIEC, PNP, SUNARP, Migraciones, SUNAT, MTC y más. Precios oficiales, plazos y cómo tramitarlos sin colas."/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <style>
+    @layer base { html,body{margin:0;padding:0;} body{overscroll-behavior:none;} }
+    ::-webkit-scrollbar{display:none;}
+    .tramite-card.hidden-card { display: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode:"class",
+      theme:{extend:{colors:{"secondary-fixed":"#85f8c4","surface-container-high":"#dce9ff","on-primary-fixed":"#001b3b","secondary-container":"#82f5c1","on-secondary-container":"#00714e","on-primary":"#ffffff","primary-fixed":"#d5e3ff","secondary":"#006c4a","background":"#f8f9ff","on-background":"#0b1c30","primary-container":"#0f294a","surface-container":"#e5eeff","on-secondary":"#ffffff","on-primary-container":"#7a91b7","surface-container-lowest":"#ffffff","primary-fixed-dim":"#b0c8f1","outline":"#74777f","surface-bright":"#f8f9ff","primary":"#00142f","on-surface-variant":"#44474e","surface":"#f8f9ff","on-error-container":"#93000a","on-surface":"#0b1c30","on-secondary-fixed":"#002114","error":"#ba1a1a","surface-container-low":"#eff4ff","on-tertiary":"#ffffff","outline-variant":"#c4c6cf"},
+      borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},
+      spacing:{"space-sm":"0.75rem","space-md":"1.25rem","margin-mobile":"1rem","space-xl":"3rem","margin":"2rem","gutter":"1.5rem","space-lg":"2rem","space-xs":"0.375rem"},
+      fontFamily:{"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-xl":["Plus Jakarta Sans"]},
+      fontSize:{"label-md":["16px",{lineHeight:"20px",fontWeight:"600"}],"body-md":["17px",{lineHeight:"28px",fontWeight:"400"}],"label-sm":["13px",{lineHeight:"16px",fontWeight:"700"}],"body-lg":["19px",{lineHeight:"30px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"700"}],"label-lg":["18px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["15px",{lineHeight:"22px",fontWeight:"500"}],"body-xl":["20px",{lineHeight:"32px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}]}}}
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]" id="main-header">
+  <div class="h-20 bg-surface/95 backdrop-blur-xl border-b border-outline-variant/30 px-margin-mobile lg:px-margin flex items-center">
+    <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="flex flex-col">
+          <span class="font-headline-md text-headline-sm text-primary tracking-tight font-bold leading-none">Mi Trámite Fácil</span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Gestión privada y transparente</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-6">
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html">Inicio</a>
+        <a class="px-3 py-2 text-secondary font-bold bg-secondary-container/20 rounded-lg transition-colors" href="tramites.html">Catálogo de Trámites</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#como-funciona">Cómo Funciona</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#faq">Preguntas Frecuentes</a>
+        <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="blog.html">Blog</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a class="hidden sm:flex items-center gap-2 bg-secondary text-on-secondary px-5 py-2.5 rounded-xl hover:bg-on-secondary-container transition-all shadow-[0_4px_12px_rgba(0,108,74,0.15)]" href="https://wa.me/51928672932" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[20px]">chat</span>
+          <div class="flex flex-col items-start leading-tight">
+            <span class="font-label-sm text-label-sm">Pedir por WhatsApp</span>
+            <span class="text-[11px] font-medium text-secondary-fixed opacity-90">Respuesta en 3 min</span>
+          </div>
+        </a>
+        <button class="xl:hidden w-8 h-8 rounded-full bg-surface-container flex items-center justify-center" onclick="document.getElementById('mobile-menu').classList.toggle('hidden'); setTimeout(adjustMainPadding,10)">
+          <span class="material-symbols-outlined text-primary text-[20px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html">Inicio</a>
+    <a class="px-3 py-2 text-secondary font-bold rounded-lg bg-secondary-container/20" href="tramites.html">Catálogo de Trámites</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#como-funciona">Cómo Funciona</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#faq">Preguntas Frecuentes</a>
+    <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="blog.html">Blog</a>
+  </div>
+</header>
+
+<main class="w-full bg-background min-h-screen" id="main-content">
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-surface-container-low to-background pt-12 pb-10">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
+      <div class="flex flex-col gap-2 max-w-3xl">
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Catálogo Completo</span>
+        <h1 class="font-extrabold text-[26px] leading-[33px] sm:text-[36px] sm:leading-[44px] text-primary">Todos los trámites del Estado peruano que gestionamos</h1>
+        <p class="text-[16px] sm:text-body-lg text-on-surface-variant">RENIEC, PNP, SUNARP, Migraciones, SUNAT, MTC y más. Tasas oficiales verificadas, sin cobros ocultos.</p>
+      </div>
+      <!-- Legend -->
+      <div class="flex flex-wrap gap-3 pt-2">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary/10 text-secondary font-label-sm text-label-sm">
+          <span class="w-5 h-5 rounded bg-secondary text-on-secondary flex items-center justify-center text-[10px] font-black">A</span>
+          100% Digital — sin que te muevas
+        </span>
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary/10 text-primary font-label-sm text-label-sm">
+          <span class="w-5 h-5 rounded bg-primary text-on-primary flex items-center justify-center text-[10px] font-black">B</span>
+          Con tu participación puntual
+        </span>
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#b45309]/10 text-[#b45309] font-label-sm text-label-sm">
+          <span class="w-5 h-5 rounded bg-[#b45309] text-white flex items-center justify-center text-[10px] font-black">C</span>
+          Presencial — preparamos todo
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER + GRID -->
+  <section class="py-10 bg-background">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-8">
+
+      <!-- Category Filter -->
+      <div class="overflow-x-auto pb-2">
+        <div class="flex gap-2 min-w-max">
+          <button onclick="filterCat('todos')" class="filter-btn active-filter px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="todos">Todos</button>
+          <button onclick="filterCat('reniec')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="reniec">RENIEC</button>
+          <button onclick="filterCat('antecedentes')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="antecedentes">Antecedentes</button>
+          <button onclick="filterCat('vehicular')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="vehicular">SAT / MTC / Vehicular</button>
+          <button onclick="filterCat('sunarp')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="sunarp">SUNARP</button>
+          <button onclick="filterCat('sunat')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="sunat">SUNAT</button>
+          <button onclick="filterCat('migraciones')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="migraciones">Migraciones</button>
+          <button onclick="filterCat('educacion')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="educacion">Educación</button>
+          <button onclick="filterCat('apostilla')" class="filter-btn px-4 py-2 rounded-xl font-label-sm text-label-sm transition-all" data-cat="apostilla">Apostilla</button>
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="tramites-grid"></div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-on-primary">
+    <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-6">
+      <h2 class="font-bold text-[22px] sm:text-[28px] text-on-primary">¿No encuentras tu trámite o tienes dudas?</h2>
+      <p class="text-primary-fixed-dim text-[16px] sm:text-body-lg max-w-xl">Escríbenos por WhatsApp y te orientamos gratis. Gestionamos trámites no listados previa evaluación.</p>
+      <a class="h-14 px-10 bg-[#25D366] text-white rounded-2xl font-label-lg text-label-lg flex items-center gap-3 shadow-xl hover:brightness-105 transition-all" href="https://wa.me/51928672932?text=Hola,%20tengo%20una%20consulta%20sobre%20un%20tr%C3%A1mite" target="_blank" rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-[24px]">chat</span>
+        <span>Consultar por WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating WA -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+  <div class="bg-surface-container-lowest text-on-surface px-3 py-1.5 rounded-full shadow-[0_4px_16px_rgba(15,41,74,0.12)] border border-outline-variant/30 flex items-center gap-2">
+    <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+    <span class="font-label-sm text-label-sm text-primary">Asesor en línea</span>
+  </div>
+  <a class="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-105 transition-transform" href="https://wa.me/51928672932" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined text-[30px]">chat</span>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-space-xl pb-space-lg">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6 border-b border-outline-variant/20">
+      <div class="flex flex-col gap-3">
+        <span class="font-headline-md text-headline-sm text-primary font-bold">Mi Trámite Fácil</span>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Gestoría digital peruana. Tramitamos por ti de forma transparente y segura.</p>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Páginas</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="index.html">Inicio</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="tramites.html">Catálogo de Trámites</a>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="blog.html">Blog de Trámites</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <span class="font-label-md text-label-md text-primary font-bold">Contacto</span>
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary flex items-center gap-1" href="https://wa.me/51928672932" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp: +51 928 672 932
+        </a>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Lun a Sáb, 8am – 8pm</span>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+        <span>© 2024 Mi Trámite Fácil</span><span class="hidden sm:inline">•</span>
+        <span class="font-bold text-on-surface-variant">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
+        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span><span>Lima, Perú</span>
+      </div>
+      <span>Conexión cifrada SSL de 256 bits</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .filter-btn { background: #e5eeff; color: #44474e; }
+  .filter-btn:hover { background: #dce9ff; color: #00142f; }
+  .active-filter { background: #00142f !important; color: #ffffff !important; }
+  .nivel-A { background: #006c4a; color: #fff; }
+  .nivel-B { background: #00142f; color: #fff; }
+  .nivel-C { background: #b45309; color: #fff; }
+</style>
+
+<script>
+  function adjustMainPadding() {
+    const h = document.getElementById('main-header');
+    const m = document.getElementById('main-content');
+    if (h && m) m.style.paddingTop = h.offsetHeight + 'px';
+  }
+  adjustMainPadding();
+  window.addEventListener('resize', adjustMainPadding);
+
+  const tramites = [
+    // ===== RENIEC =====
+    { cat:'reniec', nivel:'A', entidad:'RENIEC', titulo:'Copias Certificadas de Actas', sub:'Nacimiento, Matrimonio o Defunción', desc:'Copia certificada con firma digital y QR de verificación, emitida por el registro civil RENIEC. Válida para trámites legales, bancarios y migratorios.', tasa:'S/ 10.30', codigo:'02141', tiempo:'4 horas', entrega:'PDF por WhatsApp', wa:'Hola, deseo solicitar Copias Certificadas de Actas RENIEC' },
+    { cat:'reniec', nivel:'A', entidad:'RENIEC', titulo:'Certificado de Estado Civil', sub:'Soltero/a, casado/a, divorciado/a, viudo/a', desc:'Constancia oficial que acredita tu estado civil ante entidades del Estado, bancos o trámites de visa. Emitida directamente por RENIEC.', tasa:'Consultar', codigo:'—', tiempo:'24 horas', entrega:'PDF digital', wa:'Hola, deseo solicitar Certificado de Estado Civil RENIEC' },
+    { cat:'reniec', nivel:'A', entidad:'RENIEC', titulo:'Certificado C4', sub:'Datos de identificación oficial', desc:'Documento oficial con tus datos personales tal como figuran en la base RENIEC. Exigido por bancos, notarías y entidades públicas.', tasa:'Consultar', codigo:'—', tiempo:'24 horas', entrega:'PDF digital', wa:'Hola, deseo solicitar el Certificado C4 de RENIEC' },
+    { cat:'reniec', nivel:'B', entidad:'RENIEC', titulo:'Duplicado de DNI Electrónico', sub:'Por pérdida, robo o deterioro', desc:'Renovación de tu DNIe. Requiere selfie biométrica del titular (fondo blanco, buena luz). Nosotros completamos todo el proceso antes y después.', tasa:'S/ 33.00', codigo:'00522', tiempo:'3 a 5 días', entrega:'Recojo en agencia', wa:'Hola, deseo solicitar el Duplicado de DNI Electrónico' },
+    { cat:'reniec', nivel:'B', entidad:'RENIEC', titulo:'DNI Azul → DNI Electrónico', sub:'Migración al nuevo formato', desc:'Si tienes el DNI azul y deseas pasar al electrónico. Proceso diferente con costo de tasa distinto al duplicado estándar.', tasa:'S/ 30.00', codigo:'02121', tiempo:'3 a 5 días', entrega:'Recojo en agencia', wa:'Hola, deseo migrar de DNI azul a DNI electrónico' },
+    { cat:'reniec', nivel:'B', entidad:'RENIEC', titulo:'Renovación de DNIe por Caducidad', sub:'Documento vencido', desc:'Renovación del DNI electrónico antes o después del vencimiento. Gestionamos la cita y el proceso completo menos la toma biométrica.', tasa:'S/ 33.00', codigo:'00522', tiempo:'3 a 5 días', entrega:'Recojo en agencia', wa:'Hola, deseo renovar mi DNI electrónico vencido' },
+    { cat:'reniec', nivel:'B', entidad:'RENIEC', titulo:'Rectificación de Estado Civil en DNI', sub:'Soltero → Casado tras matrimonio', desc:'Actualización del estado civil en tu DNI electrónico después de contraer matrimonio o divorcio. Requiere acta certificada previa.', tasa:'Consultar', codigo:'—', tiempo:'5 a 7 días', entrega:'Nuevo DNI en agencia', wa:'Hola, deseo rectificar mi estado civil en el DNI' },
+
+    // ===== ANTECEDENTES =====
+    { cat:'antecedentes', nivel:'A', entidad:'PNP', titulo:'Certificado de Antecedentes Policiales', sub:'Uso laboral o migratorio', desc:'Certificado digital oficial con código QR verificable. Válido para postulaciones laborales, visa y trámites bancarios. Entrega en PDF.', tasa:'S/ 5.40', codigo:'08116', tiempo:'24 horas', entrega:'PDF por WhatsApp', wa:'Hola, deseo solicitar Antecedentes Policiales PNP' },
+    { cat:'antecedentes', nivel:'A', entidad:'Poder Judicial', titulo:'Certificado de Antecedentes Penales', sub:'Sala Penal Nacional', desc:'Constancia de que no registras condenas penales en el Poder Judicial del Perú. Imprescindible para empleos formales y visas.', tasa:'S/ 52.80', codigo:'—', tiempo:'24-48 horas', entrega:'PDF por WhatsApp', wa:'Hola, deseo solicitar Antecedentes Penales del Poder Judicial' },
+    { cat:'antecedentes', nivel:'A', entidad:'INPE / PJ / MTPE', titulo:'Certificado Único Laboral (CUL)', sub:'Penales + Policiales + Judiciales + Laboral', desc:'El CUL reúne antecedentes penales, policiales, judiciales y el historial laboral en un solo documento GRATUITO. Válido para postulaciones formales.', tasa:'Gratuito', codigo:'—', tiempo:'Inmediato', entrega:'PDF descargable', wa:'Hola, deseo obtener mi Certificado Único Laboral (CUL)' },
+    { cat:'antecedentes', nivel:'A', entidad:'INPE', titulo:'Antecedentes Judiciales INPE', sub:'Registro de internos del sistema penitenciario', desc:'Constancia de no registro como interno en el sistema penitenciario peruano. Requerido por algunas empresas junto a los otros certificados.', tasa:'Consultar', codigo:'—', tiempo:'24 horas', entrega:'PDF por WhatsApp', wa:'Hola, deseo solicitar Antecedentes Judiciales INPE' },
+
+    // ===== VEHICULAR / SAT / MTC =====
+    { cat:'vehicular', nivel:'A', entidad:'SAT Lima', titulo:'Consulta de Papeletas SAT', sub:'Revisión de multas de tránsito', desc:'Consulta todas tus papeletas activas, montos y estados. Identificamos si hay multas prescribibles o impugnables antes de que pagues.', tasa:'Gratuito', codigo:'—', tiempo:'Inmediato', entrega:'Informe en WhatsApp', wa:'Hola, deseo consultar mis papeletas SAT Lima' },
+    { cat:'vehicular', nivel:'A', entidad:'SAT Lima', titulo:'Impugnación de Papeletas SAT', sub:'Recurso de reconsideración', desc:'Presentamos el recurso de reconsideración ante el SAT dentro del plazo de 15 días hábiles. Incluye revisión del expediente y redacción del recurso.', tasa:'Gratuito', codigo:'—', tiempo:'48 horas', entrega:'Constancia de presentación', wa:'Hola, deseo impugnar una papeleta SAT Lima' },
+    { cat:'vehicular', nivel:'A', entidad:'SAT Lima', titulo:'Prescripción de Papeletas (+4 años)', sub:'Extinción de multas antiguas', desc:'Multas de más de 4 años pueden prescribir. Evaluamos tu caso, gestionamos la solicitud y potencialmente ahorras el 100% del monto.', tasa:'Gratuito', codigo:'—', tiempo:'5 días hábiles', entrega:'Resolución de prescripción', wa:'Hola, deseo evaluar la prescripción de mis papeletas SAT' },
+    { cat:'vehicular', nivel:'A', entidad:'MTC', titulo:'Récord del Conductor', sub:'Historial oficial MTC + puntos', desc:'Informe completo con infracciones registradas, puntos acumulados, estado de licencia y papeletas impagas en el sistema nacional.', tasa:'Gratuito', codigo:'—', tiempo:'2 horas', entrega:'Informe PDF', wa:'Hola, deseo obtener mi Récord del Conductor MTC' },
+    { cat:'vehicular', nivel:'B', entidad:'MTC', titulo:'Afiliación a Casilla Electrónica MTC', sub:'Obligatoria para trámites SAT / SUTRAN', desc:'Sin la casilla MTC activa, los recursos y notificaciones de papeletas no se procesan. La afiliamos por ti paso a paso.', tasa:'Gratuito', codigo:'—', tiempo:'24 horas', entrega:'Casilla activada', wa:'Hola, deseo afiliarme a la Casilla Electrónica MTC' },
+    { cat:'vehicular', nivel:'B', entidad:'MTC', titulo:'Duplicado de Licencia de Conducir', sub:'Por pérdida, robo o deterioro', desc:'Gestión del duplicado de brevete ante el MTC. Incluye pago de tasa y seguimiento del proceso hasta la emisión del nuevo documento.', tasa:'S/ 6.70', codigo:'1601', tiempo:'5 a 7 días', entrega:'Físico en agencia MTC', wa:'Hola, deseo tramitar el Duplicado de Licencia de Conducir' },
+
+    // ===== SUNARP =====
+    { cat:'sunarp', nivel:'A', entidad:'SUNARP', titulo:'Copia Literal de Partida Registral', sub:'Inmuebles, vehículos o personas jurídicas', desc:'Copia oficial con firma digital y sello registral. Válida para compraventas, herencias, créditos hipotecarios y trámites notariales.', tasa:'S/ 14.00', codigo:'Págalo.pe', tiempo:'24 horas', entrega:'PDF certificado', wa:'Hola, deseo solicitar una Copia Literal SUNARP' },
+    { cat:'sunarp', nivel:'A', entidad:'SUNARP', titulo:'Búsqueda de Índices SUNARP', sub:'Por nombre, dirección o placa', desc:'Verificamos si una persona, empresa o vehículo tiene partidas inscritas en SUNARP. Indispensable antes de cualquier operación registral.', tasa:'S/ 7.00', codigo:'04052', tiempo:'2 horas', entrega:'Informe digital', wa:'Hola, deseo una Búsqueda de Índices SUNARP' },
+    { cat:'sunarp', nivel:'A', entidad:'SUNARP', titulo:'Certificado Registral Inmobiliario (CRI)', sub:'Estado completo del predio', desc:'Documento oficial que certifica el historial completo de un inmueble: cargas, gravámenes, hipotecas y propietario actual. Plazo SUNARP: 3-5 días hábiles.', tasa:'S/ 71.00', codigo:'SPRL', tiempo:'3 a 5 días', entrega:'PDF con firma digital', wa:'Hola, deseo solicitar un Certificado Registral Inmobiliario' },
+    { cat:'sunarp', nivel:'A', entidad:'SUNARP', titulo:'Certificado de Vigencia de Poder', sub:'Para personas jurídicas y naturales', desc:'Acredita que un representante o apoderado tiene poderes vigentes ante notarías, bancos y entidades públicas.', tasa:'Consultar', codigo:'SPRL', tiempo:'24 horas', entrega:'PDF con firma digital', wa:'Hola, deseo solicitar un Certificado de Vigencia de Poder SUNARP' },
+    { cat:'sunarp', nivel:'A', entidad:'SUNARP', titulo:'Reserva de Nombre de Empresa', sub:'Primer paso para constituir tu negocio', desc:'Buscamos disponibilidad del nombre y gestionamos la reserva en SUNARP. Paso previo a la escritura pública de constitución.', tasa:'Consultar', codigo:'SPRL', tiempo:'24 horas', entrega:'Constancia de reserva', wa:'Hola, deseo reservar el nombre de mi empresa en SUNARP' },
+
+    // ===== SUNAT =====
+    { cat:'sunat', nivel:'B', entidad:'SUNAT', titulo:'Inscripción al RUC', sub:'Persona natural o jurídica', desc:'Gestión del registro ante SUNAT con verificación biométrica dactilar. Requiere participación del titular para la validación de identidad.', tasa:'Gratuito', codigo:'—', tiempo:'24-48 horas', entrega:'RUC activo', wa:'Hola, deseo inscribirme al RUC en SUNAT' },
+    { cat:'sunat', nivel:'B', entidad:'SUNAT', titulo:'Recuperación de Clave SOL', sub:'Acceso al Portal de Operaciones en Línea', desc:'Gestionamos la recuperación o restablecimiento de tu Clave SOL para que puedas operar en SUNAT sin interrupciones.', tasa:'Gratuito', codigo:'—', tiempo:'24 horas', entrega:'Clave SOL restaurada', wa:'Hola, deseo recuperar mi Clave SOL de SUNAT' },
+    { cat:'sunat', nivel:'A', entidad:'SUNAT', titulo:'Actualización de Datos del RUC', sub:'Dirección, actividad, régimen tributario', desc:'Actualización de información registrada ante SUNAT: domicilio fiscal, actividad económica, teléfono o correo de contacto.', tasa:'Gratuito', codigo:'—', tiempo:'24 horas', entrega:'RUC actualizado', wa:'Hola, deseo actualizar los datos de mi RUC en SUNAT' },
+    { cat:'sunat', nivel:'A', entidad:'SUNAT', titulo:'Baja o Suspensión Temporal de RUC', sub:'Cierre temporal o definitivo de negocio', desc:'Gestionamos la baja o suspensión temporal de actividades ante SUNAT. Muy demandado y poco conocido por contribuyentes.', tasa:'Gratuito', codigo:'—', tiempo:'48 horas', entrega:'Constancia de baja', wa:'Hola, deseo dar de baja o suspender mi RUC en SUNAT' },
+    { cat:'sunat', nivel:'A', entidad:'SUNAT', titulo:'Emisión de Recibos por Honorarios', sub:'Comprobante electrónico SUNAT', desc:'Emitimos tus recibos por honorarios electrónicos a través del portal SOL de SUNAT. Asesoría para primera emisión y capacitación incluida.', tasa:'Gratuito', codigo:'—', tiempo:'Inmediato', entrega:'PDF enviado al cliente', wa:'Hola, deseo ayuda con la emisión de Recibos por Honorarios' },
+
+    // ===== MIGRACIONES =====
+    { cat:'migraciones', nivel:'B', entidad:'Migraciones', titulo:'Carné de Extranjería', sub:'Emisión inicial para residentes', desc:'Gestionamos todo el proceso de emisión del carné de extranjería: armado de expediente, pago de derechos y seguimiento ante Migraciones.', tasa:'S/ 24.00', codigo:'07561', tiempo:'5 a 7 días hábiles', entrega:'Físico en sede Migraciones', wa:'Hola, deseo tramitar el Carné de Extranjería' },
+    { cat:'migraciones', nivel:'B', entidad:'Migraciones', titulo:'Renovación de Carné de Extranjería', sub:'Por vencimiento', desc:'Renovación del carné antes o después de su vencimiento. Gestionamos el expediente completo y el pago de tasas ante Migraciones.', tasa:'S/ 24.00', codigo:'07561', tiempo:'5 a 7 días hábiles', entrega:'Físico en sede Migraciones', wa:'Hola, deseo renovar mi Carné de Extranjería' },
+    { cat:'migraciones', nivel:'B', entidad:'Migraciones', titulo:'Duplicado de Carné por Pérdida/Robo', sub:'Requiere denuncia policial previa', desc:'Tramitamos el duplicado del carné de extranjería. Gestionamos también la denuncia policial digital si no la tienes.', tasa:'Consultar', codigo:'—', tiempo:'5 a 7 días hábiles', entrega:'Físico en sede Migraciones', wa:'Hola, deseo el Duplicado de Carné de Extranjería por pérdida' },
+    { cat:'migraciones', nivel:'B', entidad:'Migraciones', titulo:'Prórroga de Residencia', sub:'Extensión de permanencia legal', desc:'Solicitud de prórroga de residencia vía Agencia Virtual de Migraciones. Incluye armado de expediente y adjunto de documentos requeridos.', tasa:'S/ 20.20', codigo:'07566', tiempo:'5 días hábiles', entrega:'Resolución en buzón electrónico', wa:'Hola, deseo tramitar la Prórroga de Residencia en Migraciones' },
+    { cat:'migraciones', nivel:'A', entidad:'Migraciones', titulo:'Certificado de Movimiento Migratorio', sub:'Historial de entradas y salidas del Perú', desc:'Constancia oficial de todos tus ingresos y salidas del territorio peruano. Requerido para visas, naturalizaciones y trámites laborales.', tasa:'Consultar', codigo:'—', tiempo:'24 horas', entrega:'PDF oficial', wa:'Hola, deseo el Certificado de Movimiento Migratorio' },
+    { cat:'migraciones', nivel:'B', entidad:'Migraciones', titulo:'Cambio de Calidad Migratoria', sub:'Turista → Trabajador / Estudiante / Familiar', desc:'Gestión del cambio de calidad migratoria con armado completo del expediente según los requisitos específicos de tu categoría.', tasa:'Consultar', codigo:'—', tiempo:'Variable', entrega:'Resolución oficial', wa:'Hola, deseo tramitar el Cambio de Calidad Migratoria' },
+    { cat:'migraciones', nivel:'C', entidad:'Migraciones', titulo:'Pasaporte Electrónico', sub:'Presencial — preparamos todo', desc:'El pasaporte electrónico requiere presencia física. Preparamos tu documentación completa, sin embargo debes presentarte en la sede (Breña, Puruchuco, MAC o Jorge Chávez). Sin cita desde mayo 2026, entrega en 2 horas.', tasa:'Consultar', codigo:'—', tiempo:'2 horas en sede', entrega:'Físico en sede Migraciones', wa:'Hola, deseo tramitar el Pasaporte Electrónico' },
+
+    // ===== EDUCACIÓN =====
+    { cat:'educacion', nivel:'A', entidad:'SUNEDU', titulo:'Constancia de Inscripción de Grado o Título', sub:'Con código QR verificable', desc:'Constancia oficial de que tu grado académico o título está inscrito en el Registro Nacional de Grados y Títulos de SUNEDU.', tasa:'S/ 9.00', codigo:'—', tiempo:'24 horas', entrega:'PDF con QR oficial', wa:'Hola, deseo la Constancia de Inscripción de Grado/Título SUNEDU' },
+    { cat:'educacion', nivel:'A', entidad:'SUNEDU', titulo:'Consulta de Grados y Títulos', sub:'Verificación de autenticidad', desc:'Verificamos si un grado o título está registrado en SUNEDU. Útil para empleadores, instituciones y validación propia.', tasa:'Gratuito', codigo:'—', tiempo:'Inmediato', entrega:'Informe de verificación', wa:'Hola, deseo verificar un Grado o Título en SUNEDU' },
+    { cat:'educacion', nivel:'A', entidad:'MINEDU', titulo:'Títulos de Institutos Técnicos', sub:'CETPRO, Institutos Pedagógicos', desc:'Verificación y constancia de títulos emitidos por institutos de educación superior técnica y pedagógica inscritos en el MINEDU.', tasa:'Consultar', codigo:'—', tiempo:'48 horas', entrega:'PDF digital', wa:'Hola, deseo verificar un Título de Instituto Técnico MINEDU' },
+
+    // ===== APOSTILLA =====
+    { cat:'apostilla', nivel:'A', entidad:'RREE', titulo:'Apostilla Electrónica', sub:'Documentos con validez internacional', desc:'Legalizamos documentos para su uso en el extranjero mediante la Apostilla de La Haya. Compatible con antecedentes penales, títulos SUNEDU y actas RENIEC. Paquete completo disponible.', tasa:'Consultar', codigo:'—', tiempo:'3 a 5 días hábiles', entrega:'PDF con apostilla digital', wa:'Hola, deseo tramitar la Apostilla Electrónica de mis documentos' },
+  ];
+
+  function renderCards(list) {
+    const grid = document.getElementById('tramites-grid');
+    grid.innerHTML = '';
+    if (list.length === 0) {
+      grid.innerHTML = '<div class="col-span-3 text-center py-12 text-on-surface-variant">No hay trámites en esta categoría.</div>';
+      return;
+    }
+    list.forEach(t => {
+      const nivelLabel = t.nivel === 'A' ? '100% Digital' : t.nivel === 'B' ? 'Con tu participación' : 'Preparación + Presencial';
+      const nivelClass = 'nivel-' + t.nivel;
+      const card = document.createElement('div');
+      card.className = 'tramite-card bg-surface-container-lowest rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between gap-5';
+      card.dataset.cat = t.cat;
+      card.innerHTML = `
+        <div class="flex flex-col gap-4">
+          <div class="flex items-start justify-between gap-2">
+            <span class="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">${t.entidad}</span>
+            <span class="px-2.5 py-1 rounded-lg ${nivelClass} font-label-sm text-[11px] font-black uppercase tracking-wide shrink-0">Nivel ${t.nivel} · ${nivelLabel}</span>
+          </div>
+          <div>
+            <h3 class="font-headline-md text-headline-md text-primary">${t.titulo}</h3>
+            <p class="text-secondary font-label-sm text-label-sm mt-0.5">${t.sub}</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">${t.desc}</p>
+          </div>
+          <div class="bg-surface-container-low rounded-2xl p-4 flex flex-col gap-2">
+            <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+              <span>Tasa oficial Estado:</span>
+              <span class="font-bold text-on-surface">${t.tasa}${t.codigo !== '—' ? ' <span class="font-normal text-[11px]">(cód. ' + t.codigo + ')</span>' : ''}</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+              <span>Honorario de gestión:</span>
+              <span class="font-bold text-on-surface">Consultar</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">schedule</span> ${t.tiempo}</span>
+            <span>${t.entrega}</span>
+          </div>
+        </div>
+        <a class="h-12 w-full bg-secondary text-on-secondary rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-on-secondary-container transition-colors shadow-sm"
+           href="https://wa.me/51928672932?text=${encodeURIComponent(t.wa)}" target="_blank" rel="noopener noreferrer">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Pedir por WhatsApp</span>
+        </a>`;
+      grid.appendChild(card);
+    });
+  }
+
+  function filterCat(cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+    document.querySelector('[data-cat="' + cat + '"]').classList.add('active-filter');
+    const list = cat === 'todos' ? tramites : tramites.filter(t => t.cat === cat);
+    renderCards(list);
+  }
+
+  renderCards(tramites);
+</script>
+</body>
+</html>
