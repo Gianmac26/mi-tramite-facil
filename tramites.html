@@ -39,7 +39,28 @@
       <nav class="hidden xl:flex items-center gap-6">
         <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html">Inicio</a>
         <a class="px-3 py-2 text-secondary font-bold bg-secondary-container/20 rounded-lg transition-colors" href="tramites.html">Catálogo</a>
-        <a class="px-3 py-2 text-[#6d28d9] font-bold bg-[#6d28d9]/10 rounded-lg font-label-md text-label-md transition-colors" href="embargo.html">Servicios Legales</a>
+        <div class="relative" id="nav-legal-dropdown">
+          <button onclick="toggleLegalMenu(event)" id="nav-legal-btn"
+            class="px-3 py-2 text-[#6d28d9] font-bold bg-[#6d28d9]/10 rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-[#6d28d9]/20 transition-colors"
+            aria-expanded="false">
+            Servicios Legales
+            <span class="material-symbols-outlined text-[16px] transition-transform" id="nav-legal-icon">expand_more</span>
+          </button>
+          <div id="nav-legal-menu" class="hidden absolute top-full left-0 mt-1 w-60 bg-surface rounded-2xl shadow-xl border border-outline-variant/30 py-1.5 z-50 overflow-hidden">
+            <a class="flex items-center gap-2.5 px-4 py-2.5 text-on-surface-variant hover:text-[#6d28d9] hover:bg-[#6d28d9]/5 font-body-sm text-body-sm transition-colors" href="embargo.html">
+              <span class="material-symbols-outlined text-[16px] shrink-0">account_balance</span> Cuentas Embargadas
+            </a>
+            <a class="flex items-center gap-2.5 px-4 py-2.5 text-on-surface-variant hover:text-[#6d28d9] hover:bg-[#6d28d9]/5 font-body-sm text-body-sm transition-colors" href="servicios-legales/anulacion-de-antecedentes.html">
+              <span class="material-symbols-outlined text-[16px] shrink-0">manage_search</span> Anulación de Antecedentes
+            </a>
+            <a class="flex items-center gap-2.5 px-4 py-2.5 text-on-surface-variant hover:text-[#6d28d9] hover:bg-[#6d28d9]/5 font-body-sm text-body-sm transition-colors" href="mesa-partes.html">
+              <span class="material-symbols-outlined text-[16px] shrink-0">inbox</span> Mesa de Partes
+            </a>
+            <a class="flex items-center gap-2.5 px-4 py-2.5 text-on-surface-variant hover:text-[#6d28d9] hover:bg-[#6d28d9]/5 font-body-sm text-body-sm transition-colors" href="papeletas.html">
+              <span class="material-symbols-outlined text-[16px] shrink-0">receipt_long</span> Papeletas SAT
+            </a>
+          </div>
+        </div>
         <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#como-funciona">Cómo Funciona</a>
         <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="index.html#faq">FAQ</a>
         <a class="px-3 py-2 text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" href="blog.html">Blog</a>
@@ -61,7 +82,17 @@
   <div id="mobile-menu" class="hidden xl:hidden bg-surface border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
     <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html">Inicio</a>
     <a class="px-3 py-2 text-secondary font-bold rounded-lg bg-secondary-container/20" href="tramites.html">Catálogo de Trámites</a>
-    <a class="px-3 py-2 text-[#6d28d9] font-bold rounded-lg bg-[#6d28d9]/10" href="embargo.html">Servicios con Respaldo Legal</a>
+    <div class="flex flex-col gap-1">
+      <button onclick="toggleMobileLegal()" class="px-3 py-2 text-[#6d28d9] font-bold rounded-lg bg-[#6d28d9]/10 flex items-center justify-between w-full font-label-md text-label-md">
+        Servicios Legales <span class="material-symbols-outlined text-[16px] transition-transform" id="mobile-legal-icon">expand_more</span>
+      </button>
+      <div id="mobile-legal-submenu" class="hidden flex-col gap-0.5 pl-3">
+        <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container block" href="embargo.html">Cuentas Embargadas</a>
+        <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container block" href="servicios-legales/anulacion-de-antecedentes.html">Anulación de Antecedentes</a>
+        <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container block" href="mesa-partes.html">Mesa de Partes</a>
+        <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container block" href="papeletas.html">Papeletas SAT</a>
+      </div>
+    </div>
     <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#como-funciona">Cómo Funciona</a>
     <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="index.html#faq">Preguntas Frecuentes</a>
     <a class="px-3 py-2 text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container" href="blog.html">Blog</a>
@@ -147,32 +178,65 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="w-full bg-surface-container-low border-t border-outline-variant/30 pt-space-xl pb-space-lg">
-  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-6 border-b border-outline-variant/20">
-      <div class="flex flex-col gap-3">
-        <span class="font-headline-md text-headline-sm text-primary font-bold">Mi Trámite Fácil</span>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">Gestoría digital peruana. Tramitamos por ti de forma transparente y segura.</p>
+<footer class="w-full bg-surface-container-low border-t border-outline-variant/30">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-outline-variant/20">
+
+      <!-- Columna 1 -->
+      <div class="flex flex-col gap-4 md:col-span-1">
+        <a href="index.html" class="font-extrabold text-[22px] text-primary leading-none">Mi Trámite Fácil</a>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Plataforma privada y especializada en gestión y simplificación de trámites administrativos para ciudadanos peruanos. Facilitamos tu vida sin colas ni pérdida de tiempo.</p>
       </div>
-      <div class="flex flex-col gap-3">
-        <span class="font-label-md text-label-md text-primary font-bold">Páginas</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="index.html">Inicio</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="tramites.html">Catálogo de Trámites</a>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary" href="blog.html">Blog de Trámites</a>
+
+      <!-- Columna 2 -->
+      <div class="flex flex-col gap-4">
+        <span class="font-bold text-[15px] text-on-surface">Trámites</span>
+        <div class="flex flex-col gap-2.5">
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="tramites.html">Tarifario Transparente</a>
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#como-funciona">Proceso Paso a Paso</a>
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="index.html#faq">Preguntas y Garantías</a>
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5"
+             href="https://wa.me/51928672932" target="_blank" rel="noopener noreferrer">Contactar por WhatsApp</a>
+        </div>
       </div>
-      <div class="flex flex-col gap-3">
-        <span class="font-label-md text-label-md text-primary font-bold">Contacto</span>
-        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary flex items-center gap-1" href="https://wa.me/51928672932" target="_blank">
-          <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp: +51 928 672 932
-        </a>
-        <span class="font-body-sm text-body-sm text-on-surface-variant">Lun a Sáb, 8am – 8pm</span>
+
+      <!-- Columna 3 -->
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
+          <span class="font-bold text-[15px] text-on-surface">Legal y Seguridad</span>
+          <div class="flex flex-col gap-2.5">
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">📋 Libro de Reclamaciones</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Términos y Condiciones</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-[13px] text-on-surface uppercase tracking-wide">Pagos Seguros</span>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">Yape</span>
+            <span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">Plin</span>
+            <span class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30">Tarjetas</span>
+          </div>
+        </div>
       </div>
+
     </div>
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80 text-center sm:text-left">
+
+    <!-- Descargo -->
+    <div class="py-6 border-b border-outline-variant/20 flex items-start gap-3">
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5 shrink-0">verified_user</span>
+      <p class="text-[12px] text-on-surface-variant leading-relaxed">
+        <strong class="text-on-surface">Descargo de Responsabilidad Institucional:</strong> Mi Trámite Fácil es un servicio de AMG Comunica S.A.C. (RUC 20606668733), agencia privada e independiente prestadora de servicios de gestoría y facilitación técnica ante diversas entidades estatales peruanas (RENIEC, SUNAT, Poder Judicial, entre otras). No constituimos ni representamos a ninguna entidad pública oficial.
+      </p>
+    </div>
+
+    <!-- Copyright -->
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant/80">
       <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
         <span>© 2024 Mi Trámite Fácil</span><span class="hidden sm:inline">•</span>
-        <span class="font-bold text-on-surface-variant">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
-        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span><span>Lima, Perú</span>
+        <span class="font-bold">AMG Comunica S.A.C.</span><span class="hidden sm:inline">•</span>
+        <span>RUC 20606668733</span><span class="hidden sm:inline">•</span>
+        <span>Lima, Perú</span>
       </div>
       <span>Conexión cifrada SSL de 256 bits</span>
     </div>
@@ -310,5 +374,36 @@
 
   renderCards(tramites);
 </script>
+
+  <!-- Legal services dropdown JS -->
+  <script>
+    function toggleLegalMenu(e) {
+      e.stopPropagation();
+      const menu = document.getElementById('nav-legal-menu');
+      const icon = document.getElementById('nav-legal-icon');
+      const btn  = document.getElementById('nav-legal-btn');
+      const open = menu.classList.toggle('hidden');
+      icon.style.transform = open ? '' : 'rotate(180deg)';
+      btn.setAttribute('aria-expanded', String(!open));
+    }
+    function toggleMobileLegal() {
+      const menu = document.getElementById('mobile-legal-submenu');
+      const icon = document.getElementById('mobile-legal-icon');
+      const open = menu.classList.toggle('hidden');
+      if (!open) menu.style.display = 'flex';
+      icon.style.transform = open ? '' : 'rotate(180deg)';
+    }
+    document.addEventListener('click', function() {
+      const menu = document.getElementById('nav-legal-menu');
+      const icon = document.getElementById('nav-legal-icon');
+      const btn  = document.getElementById('nav-legal-btn');
+      if (menu && !menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+        if (icon) icon.style.transform = '';
+        if (btn)  btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
 </body>
 </html>
